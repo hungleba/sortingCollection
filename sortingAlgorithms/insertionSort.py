@@ -22,9 +22,8 @@ def main():
 def insertionSort(arr) :
 	global compareTimes
 	for curr in range(0, len(arr)-1):
-		compareTimes += 1
-		if arr[curr] < arr[curr+1]: #Assume the left-side array is always sorted
-			curr += 1
+		if arr[curr] <= arr[curr+1]: #Assume the left-side array is always sorted
+			compareTimes += 1
 			continue
 		else:
 			i = curr+1
